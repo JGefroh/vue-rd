@@ -1,0 +1,8 @@
+# the output folder of the build
+build
+
+# Dependencies that can be re-downloaded via package.json
+node_modules
+
+# Random OS files
+.DS_Store
