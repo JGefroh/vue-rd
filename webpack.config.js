@@ -7,6 +7,7 @@ const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin'); // Used
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Used to generate an index.html file with proper hashed assets
 const PackageJson = require('./package.json');  //Used to automatically load dependencies into vendor.
 
+
 const OUTPUT_FOLDER_NAME = 'build/'
 
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
     },
     resolve: {
       modules: ['node_modules', 'app'],
-      extensions: [".jsx", ".js", ".scss"],
+      extensions: [".vue", ".js", ".scss"],
       alias: {
         vue: 'vue/dist/vue.js'
       }
@@ -48,6 +49,10 @@ module.exports = {
            query: {
                presets: ['es2015']
            }
+        },
+        {
+          test: /\.html$/,
+          loader: 'html-loader'
         }
       ]
     },
