@@ -14,7 +14,7 @@ var app = new Vue({
   el: '#app',
   data: {
     title: 'Hello World',
-    description: 'This is the App Description',
+    description: 'This is a gallery of proof of concepts for Vue. You can utilize these techniques to build your web applications.',
     quote: 'This is my quote. There are many like it but this one is mine.',
     quoteAuthor: 'Joseph Gefroh',
     whatDidYouType: '',
