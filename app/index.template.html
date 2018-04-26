@@ -35,6 +35,21 @@
         <label>Should alert</label>
         <button-action label="Hello" v-bind:action="onClick1"><button-action>
       </section>
+      <hr>
+      <section>
+        Request loading<br/>
+        <button v-on:click="loadUsers()">Load users</button>
+      </section>
+      <hr>
+      <section>
+        Template repeats<br/>
+        <ul>
+          <li v-for="object in objects">
+            {{object.label}} - {{object.value}}
+          </li>
+        </ul>
+      </section>
+
 
     </div>
   </body>
