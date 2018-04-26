@@ -24,7 +24,9 @@ var app = new Vue({
       {id: 2, label: "Bravo", value: 'B'},
       {id: 3, label: "Charlie", value: 'C'},
       {id: 4, label: "Null", value: null},
-    ]
+    ],
+    color: '',
+    big: false
   },
   methods: {
     onClick1: function(params) {
@@ -35,5 +37,5 @@ var app = new Vue({
         alert(JSON.stringify(payload.data))
       })
     }
-  }
+  },
 })

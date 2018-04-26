@@ -55,8 +55,20 @@
         <div>original: {{title}}</div>
         <div>with filter: {{title | despace}}</div>
       </section>
-
-
+      <hr>
+      <section>
+        Real-time style change<br/>
+        <div v-bind:style="{color: color}">I am {{color}}</div>
+        <button v-on:click="color = 'blue'">Blue</button>
+        <button v-on:click="color = 'green'">Green</button>
+      </section>
+      <hr>
+      <section>
+        Real-time class change<br/>
+        <div v-bind:class="big ? 'big-class' : ''">I change size</div>
+        <button v-on:click="big = !big">change size</button>
+      </section>
+      <hr>
     </div>
   </body>
 </html>
