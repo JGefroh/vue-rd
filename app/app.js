@@ -6,6 +6,7 @@ console.info("Hello world")
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello World'
+    title: 'Hello World',
+    description: 'This is the App Description'
   }
 })
