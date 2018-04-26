@@ -26,15 +26,17 @@ var app = new Vue({
       {id: 4, label: "Null", value: null},
     ],
     color: '',
-    big: false
+    big: false,
+    users: []
   },
   methods: {
-    onClick1: function(params) {
+    onClick1(params) {
       alert('clicked me -' + params);
     },
-    loadUsers: function() {
-      UsersService.index().then(function(payload) {
+    loadUsers() {
+      UsersService.index().then((payload) => {
         alert(JSON.stringify(payload.data))
+        this.users = payload.data;
       })
     }
   },
