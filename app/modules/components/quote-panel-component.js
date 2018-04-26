@@ -1,9 +1,13 @@
 import Vue from 'vue';
-// console.info(require('./quote-panel-component.html'))
+
 Vue.component('quote-panel', {
-  props: ['quote', 'quoteAuthor'],
+  props: {
+    quote: String,
+    quoteAuthor: String
+  },
   data: function() {
     return {
+      inputQuoteAuthor: this.quoteAuthor
     }
   },
   template: require('./quote-panel-component.html')

@@ -10,7 +10,10 @@
       <h1>{{title}}</h1>
       <p>{{description}}</p>
 
-      <quote-panel quote="quote" quote-author="quoteAuthor"></quote-panel>
+      <quote-panel v-bind:quote="quote" v-bind:quote-author.sync="quoteAuthor"></quote-panel>
+
+      <label>Quote by</label>
+      <input v-model="quoteAuthor"></input>
     </div>
   </body>
 </html>
