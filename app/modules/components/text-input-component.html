@@ -1,0 +1,4 @@
+<div>
+  <label>{{label}}</label>
+  <input v-bind:value="value" v-on:input="$emit('update:value', $event.target.value)"></input>
+</div>

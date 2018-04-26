@@ -10,6 +10,8 @@ var app = new Vue({
     title: 'Hello World',
     description: 'This is the App Description',
     quote: 'This is my quote. There are many like it but this one is mine.',
-    quoteAuthor: 'Joseph Gefroh'
+    quoteAuthor: 'Joseph Gefroh',
+    whatDidYouType: '',
+    whatDidYouType2: '' 
   }
 })
