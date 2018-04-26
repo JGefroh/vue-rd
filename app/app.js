@@ -18,10 +18,10 @@ var app = new Vue({
     whatDidYouType: '',
     whatDidYouType2: '',
     objects: [
-      {label: "Alpha", value: 'A'},
-      {label: "Bravo", value: 'B'},
-      {label: "Charlie", value: 'C'},
-      {label: "Null", value: null},
+      {id: 1, label: "Alpha", value: 'A'},
+      {id: 2, label: "Bravo", value: 'B'},
+      {id: 3, label: "Charlie", value: 'C'},
+      {id: 4, label: "Null", value: null},
     ]
   },
   methods: {

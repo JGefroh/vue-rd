@@ -44,7 +44,7 @@
       <section>
         Template repeats<br/>
         <ul>
-          <li v-for="object in objects">
+          <li v-for="object in objects.slice(1,4)" track-by="id">
             {{object.label}} - {{object.value}}
           </li>
         </ul>
