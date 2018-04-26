@@ -12,6 +12,11 @@ var app = new Vue({
     quote: 'This is my quote. There are many like it but this one is mine.',
     quoteAuthor: 'Joseph Gefroh',
     whatDidYouType: '',
-    whatDidYouType2: '' 
+    whatDidYouType2: ''
+  },
+  methods: {
+    onClick1: function(params) {
+      alert('clicked me -' + params);
+    }
   }
 })

@@ -8,26 +8,32 @@
   <body>
     <div id="app">
       <section>
-        Templates
+        Templates<br/>
         <h1>{{title}}</h1>
         <p>{{description}}</p>
       </section>
       <hr>
       <section>
-        Parent -> Child
+        Parent -> Child<br/>
         <quote-panel v-bind:quote="quote" v-bind:quote-author="quoteAuthor"></quote-panel>
       </section>
       <hr>
       <section>
-        Input
+        Input<br/>
         <label>You typed: {{whatDidYouType}}</label>
         <input v-model="whatDidYouType"></input>
       </section>
       <hr>
       <section>
-        Child -> Parent Component Communication (Data return)
+        Child -> Parent Component Communication (Data return)<br/>
         <label>You typed: {{whatDidYouType2}}</label>
         <text-input v-bind:value.sync="whatDidYouType2"></text-input>
+      </section>
+      <hr>
+      <section>
+        Child -> Parent Function passing<br/>
+        <label>Should alert</label>
+        <button-action label="Hello" v-bind:action="onClick1"><button-action>
       </section>
 
     </div>
