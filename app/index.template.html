@@ -42,12 +42,18 @@
       </section>
       <hr>
       <section>
-        Template repeats<br/>
+        Template repeats with identity and just-in-time reducing<br/>
         <ul>
           <li v-for="object in objects.slice(1,4)" track-by="id">
             {{object.label}} - {{object.value}}
           </li>
         </ul>
+      </section>
+      <hr>
+      <section>
+        Just-in-time formatting via filters<br/>
+        <div>original: {{title}}</div>
+        <div>with filter: {{title | despace}}</div>
       </section>
 
 

@@ -4,8 +4,10 @@ require("styles/app");
 
 console.info("Hello world")
 require('modules/components/components-module')
-require('modules/users/users-module')
+require('modules/filters/filters-module')
 require('modules/services/services-module')
+
+require('modules/users/users-module')
 import UsersService from 'modules/users/users-service'
 
 var app = new Vue({
