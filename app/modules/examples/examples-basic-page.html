@@ -1,0 +1,79 @@
+<section class="examples-basic-page">
+  <section>
+    Templates<br/>
+    <h1>{{title}}</h1>
+    <p>{{description}}</p>
+  </section>
+  <hr>
+  <section>
+    Parent -> Child<br/>
+    <quote-panel v-bind:quote="quote" v-bind:quote-author="quoteAuthor"></quote-panel>
+  </section>
+  <hr>
+  <section>
+    Input<br/>
+    <label>You typed: {{whatDidYouType}}</label>
+    <input v-model="whatDidYouType"></input>
+  </section>
+  <hr>
+  <section>
+    Child -> Parent Component Communication (Data return)<br/>
+    <label>You typed: {{whatDidYouType2}}</label>
+    <text-input v-bind:value.sync="whatDidYouType2"></text-input>
+  </section>
+  <hr>
+  <section>
+    Child -> Parent Function passing<br/>
+    <label>Should alert</label>
+    <button-action label="Hello" v-bind:action="onClick1"></button-action>
+  </section>
+  <hr>
+  <section>
+    Request loading<br/>
+    <button v-on:click="loadUsers()">Load users</button>
+    <ul>
+      <li v-for="user in users" track-by="id">
+        {{user.first_name}}
+      </li>
+    </ul>
+
+  </section>
+  <hr>
+  <section>
+    Template repeats with identity and just-in-time reducing<br/>
+    <ul>
+      <li v-for="object in objects.slice(1,4)" track-by="id">
+        {{object.label}} - {{object.value}}
+      </li>
+    </ul>
+  </section>
+  <hr>
+  <section>
+    Just-in-time formatting via filters<br/>
+    <div>original: {{title}}</div>
+    <div>with filter: {{title | despace}}</div>
+  </section>
+  <hr>
+  <section>
+    Real-time style change<br/>
+    <div v-bind:style="{color: color}">I am {{color}}</div>
+    <button v-on:click="color = 'blue'">Blue</button>
+    <button v-on:click="color = 'green'">Green</button>
+  </section>
+  <hr>
+  <section>
+    Real-time class change<br/>
+    <div v-bind:class="big ? 'big-class' : ''">I change size</div>
+    <button v-on:click="big = !big">change size</button>
+  </section>
+  <hr>
+  <section>
+    Transclusion test<br/>
+    <div>
+      <transclusion>
+        This should appear.
+      </transclusion>
+    </div>
+  </section>
+  <hr>
+</section>

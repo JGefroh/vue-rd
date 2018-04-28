@@ -1,4 +1,4 @@
-import ServiceBase from 'modules/services/service-base';
+import ServiceBase from 'modules/base/services/service-base';
 
 class UsersService extends ServiceBase {
   constructor() {
