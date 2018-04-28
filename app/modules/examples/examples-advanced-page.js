@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import UsersService from 'modules/users/users-service';
 
+require('./examples-advanced-page.scss')
+
 Vue.component('examples-advanced-page', {
   template: require('./examples-advanced-page.html'),
   data() {
