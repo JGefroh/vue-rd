@@ -1,0 +1,34 @@
+button {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  max-width: 7.5rem;
+
+  &.auto {
+    width: auto;
+  }
+
+  &.max-width {
+    width: 100%;
+  }
+
+  &.primary {
+
+  }
+
+  &.secondary {
+
+  }
+
+  &:disabled {
+  }
+
+  &:hover {
+  }
+
+  &:focus {
+  }
+
+  &:active {
+  }
+}
