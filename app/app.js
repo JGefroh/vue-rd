@@ -21,8 +21,8 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes: [
     {path: '/', component: {template: '<home-page></home-page>'}},
-    {path: '/basic', component: {template: '<examples-basic-page></examples-basic-page>'}},
-    {path: '/advanced', component: {template: '<examples-advanced-page></examples-advanced-page>'}}
+    {path: '/examples/basic', name: 'basic', component: {template: '<examples-basic-page></examples-basic-page>'}},
+    {path: '/examples/advanced/:uid', name: 'advanced', component: {template: '<examples-advanced-page></examples-advanced-page>'}}
   ]
 });
 

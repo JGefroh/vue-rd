@@ -2,6 +2,6 @@
   <h1>Welcome</h1>
   <p>This is a demonstration of various web application components and concepts using Vue.</p>
 
-  <router-link to="/basic">Basic Examples</router-link>
-  <router-link to="/advanced">Advanced Examples</router-link>
+  <router-link v-bind:to="{name: 'basic'}">Basic Examples</router-link>
+  <router-link v-bind:to="{name: 'advanced', params: {uid: 2}, query: {id: 4}}">Advanced Examples</router-link>
 </section>
