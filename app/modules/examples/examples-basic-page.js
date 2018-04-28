@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import UsersService from 'modules/users/users-service';
 
 Vue.component('examples-basic-page', {
   template: require('./examples-basic-page.html'),
