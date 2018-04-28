@@ -1,6 +1,11 @@
 button {
+  background-color: $color-button-background-default;
+  border: 1px solid $color-button-border-default;
   cursor: pointer;
   display: inline-block;
+  text-align: center;
+  padding: 0.25rem;
+  margin: 0;
   width: 100%;
   max-width: 7.5rem;
 
