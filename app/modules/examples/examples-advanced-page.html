@@ -7,16 +7,26 @@
       {{user.first_name}} {{ user.last_name }}
     </div>
   </section>
+  <hr>
   <section>
     Data load on page load from query param<br/>
     <div>
       {{user2.first_name}} {{ user2.last_name }}
     </div>
   </section>
+  <hr>
   <section>
     Data load on page load from path param<br/>
     <div>
       {{user3.first_name}} {{ user3.last_name }}
+    </div>
+  </section>
+  <hr>
+  <section>
+    Recursive component loading<br/>
+    <div>
+      <input v-model="level"></input>
+      <recursion v-bind:level="level" v-if="level > 0"></recursion>
     </div>
   </section>
 </section>

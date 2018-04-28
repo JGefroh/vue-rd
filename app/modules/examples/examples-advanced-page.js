@@ -7,7 +7,8 @@ Vue.component('examples-advanced-page', {
     return {
       user: {},
       user2: {},
-      user3: {}
+      user3: {},
+      level: 3
     }
   },
   mounted() {
