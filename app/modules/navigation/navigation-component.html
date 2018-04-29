@@ -1,7 +1,10 @@
 <section>
   <ul>
-    <li>Potato</li>
-    <li>Tomato</li>
-    <li></li>
+    <li>
+      <router-link v-bind:to="{name: 'basic'}">Basic Examples</router-link>
+    </li>
+    <li>
+      <router-link v-bind:to="{name: 'advanced', params: {uid: 2}, query: {id: 4}}">Advanced Examples</router-link>
+    </li>
   </ul>
 </section>

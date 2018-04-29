@@ -5,8 +5,17 @@
 
 .dashboard-layout {
   .sidebar-content {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: top;
+    width: 10%;
   }
 
   .main-content {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 1rem;
+    width: 90%;
   }
 }
