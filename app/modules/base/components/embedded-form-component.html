@@ -1,0 +1,12 @@
+<form>
+  {{value}}<br/>
+  <label>field1 (child)</label><br/>
+  <input v-model="value.field1"></input>
+  <br/>
+  <label>field2 (child)</label><br/>
+  <input v-model="value.field2"></input>
+  <br/>
+  <label>field3 (child)</label><br/>
+  <input v-model="value.field3"></input>
+  <button v-on:click="childReset">Child Reset</button>
+</form>

@@ -19,7 +19,10 @@ Vue.component('examples-basic-page', {
       ],
       color: '',
       big: false,
-      users: []
+      users: [],
+      myobject: {
+        field3: 'poato'
+      }
     }
   },
   methods: {

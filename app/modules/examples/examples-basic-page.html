@@ -14,18 +14,37 @@
     Input<br/>
     <label>You typed: {{whatDidYouType}}</label>
     <input v-model="whatDidYouType"></input>
+    <button v-on:click="whatDidYouType = null">Reset</button>
   </section>
   <hr>
   <section>
     Child -> Parent Component Communication (Data return)<br/>
     <label>You typed: {{whatDidYouType2}}</label>
     <text-input v-bind:value.sync="whatDidYouType2"></text-input>
+    <button v-on:click="whatDidYouType2 = null">Reset</button>
   </section>
   <hr>
   <section>
     Child -> Parent Function passing<br/>
     <label>Should alert</label>
     <button-action label="Hello" v-bind:action="onClick1"></button-action>
+  </section>
+  <section>
+    Child -> Parent Object passing<br/>
+    <label>Parent</label>
+    <pre>
+      {{myobject}}
+    </pre></br>
+    <label>field1 (parent)</label>
+    <text-input v-bind:value.sync="myobject.field1"></text-input>
+    <label>field2 (parent)</label>
+    <text-input v-bind:value.sync="myobject.field2"></text-input>
+    <label>field2 (parent)</label>
+    <text-input v-bind:value.sync="myobject.field3"></text-input>
+    <button v-on:click="myobject = {}">Parent Reset</button>
+    --------<br/>
+    <label>Child</label>
+    <embedded-form v-bind:value.sync="myobject"></embedded-form>
   </section>
   <hr>
   <section>
