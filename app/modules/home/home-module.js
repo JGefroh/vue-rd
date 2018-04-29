@@ -1,6 +1,11 @@
 require('./home-page');
 
 const routes = [
-  {path: '/', component: {template: '<home-page></home-page>'}}
+  {
+    path: '/',
+    components: {
+      default: {template: '<home-page></home-page>'}
+    }
+  }
 ]
 export default routes;
