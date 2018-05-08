@@ -2,5 +2,6 @@
   <label>{{label}}</label>
   <input v-bind:value="value"
          v-on:input="$emit('update:value', $event.target.value)"
-         v-bind:placeholder="placeholder"></input>
+         v-bind:placeholder="placeholder"
+         v-bind:type="type"></input>
 </div>

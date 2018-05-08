@@ -7,6 +7,10 @@ Vue.component('text-input', {
     },
     label: String,
     placeholder: String,
+    type: {
+      type: String,
+      default: 'text'
+    }
   },
   data: function() {
     return {
