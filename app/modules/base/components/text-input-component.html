@@ -1,4 +1,6 @@
-<div>
+<div class="input-group">
   <label>{{label}}</label>
-  <input v-bind:value="value" v-on:input="$emit('update:value', $event.target.value)"></input>
+  <input v-bind:value="value"
+         v-on:input="$emit('update:value', $event.target.value)"
+         v-bind:placeholder="placeholder"></input>
 </div>

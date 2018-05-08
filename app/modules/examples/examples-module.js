@@ -1,5 +1,6 @@
-require('./examples-basic-page');
 require('./examples-advanced-page');
+require('./examples-basic-page');
+require('./examples-form-page');
 
 const routes = [
   {
@@ -11,6 +12,11 @@ const routes = [
     path: '/examples/advanced/:uid',
     name: 'advanced',
     component: {template: '<examples-advanced-page></examples-advanced-page>'}
+  },
+  {
+    path: '/examples/form',
+    name: 'form',
+    component: {template: '<examples-form-page></examples-form-page>'}
   }
 ];
 

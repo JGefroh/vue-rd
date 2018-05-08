@@ -1,20 +1,20 @@
 $color-black: #393E41;
 $color-white: #E7E5DF;
 
+$color-accent-primary: #44BBA4;
+$color-accent-primary-darker: #7B9EA8;
+$color-accent-secondary: #E7BB41;
 
 $color-text-body: $color-black;
 $color-text-heading-primary: $color-black;
 $color-text-heading-secondary: $color-black;
-$color-text-button-primary: $color-black;
-$color-text-button-secondary: $color-black;
 
-$color-button-border-default: $color-white;
-$color-button-background-default: $color-white;
+$color-button-border-default: $color-accent-primary;
+$color-button-background-default: $color-accent-primary;
+$color-button-text-primary: $color-accent-secondary;
+$color-button-text-secondary: $color-accent-secondary;
 
 
-$color-accent-primary: #44BBA4;
-$color-accent-primary-darker: #7B9EA8;
-$color-accent-secondary: #E7BB41;
 
 
 $color-background: $color-white;

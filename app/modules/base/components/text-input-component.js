@@ -2,8 +2,11 @@ import Vue from 'vue';
 
 Vue.component('text-input', {
   props: {
+    value: {
+      required: true
+    },
     label: String,
-    value: String
+    placeholder: String,
   },
   data: function() {
     return {

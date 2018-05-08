@@ -21,9 +21,11 @@
   .main-content {
     background-color: $color-background;
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     min-height: 100%;
     margin-left: $sidebar-width;
+    max-width: 100% - $sidebar-width;
+    margin-right: 0;
     padding: 1rem;
     width: 85%;
   }
