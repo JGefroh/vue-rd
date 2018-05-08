@@ -1,8 +1,8 @@
-<section class="modal-background" v-on:click.self="cancel()">
+<section class="modal-background" v-on:click.self="cancelModal">
   <section class="modal-wrapper">
     <section class="modal-content">
       <template>
-          <component v-bind:is="options.component"></component>
+          <component v-bind:is="options.component" v-bind:accept-modal="acceptModal" v-bind:cancel-modal="cancelModal"></component>
       </template>
       <span v-html="options.template"></span>
     </section>

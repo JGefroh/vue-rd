@@ -1,6 +1,7 @@
 require('./examples-advanced-page');
 require('./examples-basic-page');
 require('./examples-form-page');
+require('./examples-modal-component');
 require('./examples-modal-page');
 
 const routes = [

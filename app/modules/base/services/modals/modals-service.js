@@ -6,7 +6,7 @@ class ModalService {
 
 }
 
-ModalService.launch = function(options) {
+ModalService.launch = function(options, onAccept, onCancel) {
   let modalSlotId = `base-modal-slot-${ModalService.modalNumber}`;
   let modalId = `base-modal-${ModalService.modalNumber}`;
 
@@ -15,16 +15,26 @@ ModalService.launch = function(options) {
   document.getElementById('app').appendChild(modalSlotElement);
 
   const VueModal = Vue.extend({
-    template: `<base-modal id="${modalId}" v-bind:cancelModal="cancelModal" v-bind:options="options"></base-modal>`,
+    template: `<base-modal id="${modalId}" v-bind:cancel-modal="cancelModal" v-bind:accept-modal="acceptModal" v-bind:options="options"></base-modal>`,
     data() {
       return {
         options: options
       };
     },
     methods: {
-      cancelModal() {
+      acceptModal(value) {
         this.$destroy(true);
         removeElement();
+        if (onAccept) {
+          onAccept(value)
+        }
+      },
+      cancelModal(value) {
+        this.$destroy(true);
+        removeElement();
+        if (onCancel) {
+          onCancel(value)
+        }
       }
     }
   });
