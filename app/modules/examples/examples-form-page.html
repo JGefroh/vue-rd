@@ -1,14 +1,10 @@
 <section>
-  <text-input label="Amount" v-bind:value.sync="input.amount" placeholder="0.00" />
+  <text-input label="Amount" v-bind:value.sync="input.amount" placeholder="0.00" type="tel"/>
   <hr>
   <text-input label="First Name" v-bind:value.sync="input.first_name" />
   <text-input label="Last Name" v-bind:value.sync="input.last_name" />
   <hr>
-  <text-input label="Address 1" v-bind:value.sync="input.address.address1" />
-  <text-input label="Address 2" v-bind:value.sync="input.address.address2" />
-  <text-input label="City" v-bind:value.sync="input.address.city" />
-  <text-input label="State" v-bind:value.sync="input.address.region" />
-  <text-input label="Zip" v-bind:value.sync="input.address.postal" />
+  <address-input v-bind:value.sync="input.address" />
 
   <label>Your Data</label>
   <code>

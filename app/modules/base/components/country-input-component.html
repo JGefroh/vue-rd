@@ -1,0 +1,12 @@
+<div class="input-group">
+  <label>{{label}}</label>
+  <select v-bind:value="value"
+          v-on:input="$emit('update:value', $event.target.value)"
+          v-bind:autocomplete="autocomplete"
+          v-bind:placeholder="placeholder">
+    <option value="">Please select a country...</option>
+    <option v-for="option in options" v-bind:value="option.value" :key="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+</div>
