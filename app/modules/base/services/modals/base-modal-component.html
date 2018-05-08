@@ -1,0 +1,10 @@
+<section class="modal-background" v-on:click.self="cancel()">
+  <section class="modal-wrapper">
+    <section class="modal-content">
+      <template>
+          <component v-bind:is="options.component"></component>
+      </template>
+      <span v-html="options.template"></span>
+    </section>
+  </section>
+</section>
