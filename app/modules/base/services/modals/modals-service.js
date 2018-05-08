@@ -1,5 +1,5 @@
 import Vue from 'vue';
-//Provides standard communication protocol for API requests, including common tasks and parsing.
+//Provides a consistent API and abstraction layer to launch components as modals.
 class ModalService {
   constructor() {
   }
@@ -33,7 +33,6 @@ ModalService.launch = function(options) {
     let element = document.getElementById(modalId);
     element.parentNode.removeChild(element);
   }
-
 
   const vueModalInstance = new VueModal({});
   const vm = vueModalInstance.$mount(`#${modalSlotId}`);
