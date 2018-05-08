@@ -1,10 +1,8 @@
 @import 'base/base';
 
-@import 'pages/examples-advanced-page';
+@import 'components/navigation-component';
 
-body {
-  background-color: red;
-}
+@import 'pages/examples-advanced-page';
 
 .big-class {
   font-size: 5rem;

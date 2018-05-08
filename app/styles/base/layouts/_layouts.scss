@@ -1,21 +1,35 @@
+
+
 .standard-layout {
   .main-content {
+    background-color: $color-background;
   }
 }
 
 .dashboard-layout {
+  $sidebar-width: 15%;
+  min-height: 100%;
   .sidebar-content {
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 1rem;
+    background-color: $color-background-sidebar;
+    bottom: 0;
+    position: fixed;
+    top: 0;
     vertical-align: top;
-    width: 10%;
+    width: $sidebar-width;
   }
 
   .main-content {
+    background-color: $color-background;
     box-sizing: border-box;
     display: inline-block;
+    min-height: 100%;
+    margin-left: $sidebar-width;
     padding: 1rem;
-    width: 90%;
+    width: 85%;
   }
+}
+
+html, body, .app {
+  background-color: $color-background;
+  min-height: 100%;
 }

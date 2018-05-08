@@ -7,7 +7,7 @@
   <hr>
   <section>
     Parent -> Child<br/>
-    <quote-panel v-bind:quote="quote" v-bind:quote-author="quoteAuthor"></quote-panel>
+    <quote-panel v-bind:quote="quote" v-bind:quote-author="quoteAuthor" />
   </section>
   <hr>
   <section>
@@ -20,7 +20,7 @@
   <section>
     Child -> Parent Component Communication (Data return)<br/>
     <label>You typed: {{whatDidYouType2}}</label>
-    <text-input v-bind:value.sync="whatDidYouType2"></text-input>
+    <text-input v-bind:value.sync="whatDidYouType2" />
     <button v-on:click="whatDidYouType2 = null">Reset</button>
   </section>
   <hr>

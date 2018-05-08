@@ -1,13 +1,24 @@
-$color-black: black;
-$color-white: white;
+$color-black: #393E41;
+$color-white: #E7E5DF;
 
 
-$color-text-body: black;
-$color-text-heading-primary: black;
-$color-text-heading-secondary: black;
-$color-text-button-primary: black;
-$color-text-button-secondary: black;
-
+$color-text-body: $color-black;
+$color-text-heading-primary: $color-black;
+$color-text-heading-secondary: $color-black;
+$color-text-button-primary: $color-black;
+$color-text-button-secondary: $color-black;
 
 $color-button-border-default: $color-white;
 $color-button-background-default: $color-white;
+
+
+$color-accent-primary: #44BBA4;
+$color-accent-primary-darker: #7B9EA8;
+$color-accent-secondary: #E7BB41;
+
+
+$color-background: $color-white;
+$color-background-sidebar: #084C61;
+
+$color-link: $color-accent-primary;
+$color-link-hover: #7B9EA8;
