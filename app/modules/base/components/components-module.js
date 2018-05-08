@@ -1,4 +1,5 @@
 require ('./address-input-component')
+require ('./amount-input-component')
 require ('./button-action-component')
 require ('./country-input-component')
 require ('./embedded-form-component')
