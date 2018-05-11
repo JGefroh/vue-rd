@@ -1,56 +1,62 @@
 <section class="examples-basic-page">
   <section>
-    Templates<br/>
     <h1>{{title}}</h1>
     <p>{{description}}</p>
   </section>
   <hr>
   <section>
-    Parent -> Child<br/>
+    <h2>You can pass values and variables to children components.</h2><br/>
     <quote-panel v-bind:quote="quote" v-bind:quote-author="quoteAuthor" />
   </section>
   <hr>
   <section>
-    Input<br/>
-    <label>You typed: {{whatDidYouType}}</label>
+    <h2>2-way data binding updates data automatically when it changes.</h2><br/>
+    <label>You typed:</label><br/>
+    {{whatDidYouType}}
+    <br/>
     <input v-model="whatDidYouType"></input>
     <button v-on:click="whatDidYouType = null">Reset</button>
   </section>
   <hr>
   <section>
-    Child -> Parent Component Communication (Data return)<br/>
-    <label>You typed: {{whatDidYouType2}}</label>
+    <h2>Child components can easily update data that exists in the parent.</h2><br/>
+    <label>You typed:</label><br/>
+    {{whatDidYouType2}}
+    <br/>
     <text-input v-bind:value.sync="whatDidYouType2" />
     <button v-on:click="whatDidYouType2 = null">Reset</button>
   </section>
   <hr>
   <section>
-    Child -> Parent Function passing<br/>
+    <h2>
+      Parent components can pass functions down to children for them to execute.
+      <br/>
+      Children pass their own parameters!
+    </h2><br/>
     <label>Should alert</label>
     <button-action label="Hello" v-bind:action="onClick1"></button-action>
   </section>
   <hr>
   <section>
-    Child -> Parent Object passing<br/>
-    <label>Parent</label>
-    <pre>
-      {{myobject}}
-    </pre></br>
-    <label>field1 (parent)</label>
+    <h2>Child components and parent components can 2-way bind data elements within an object.</h2><br/>
+    Parent sees:<br/>
+    {{myobject}}
+    <br/><br/>
+    <label>Field1 (parent)</label>
     <text-input v-bind:value.sync="myobject.field1"></text-input>
-    <label>field2 (parent)</label>
+    <label>Field2 (parent)</label>
     <text-input v-bind:value.sync="myobject.field2"></text-input>
-    <label>field3 (parent)</label>
+    <label>Field3 (parent)</label>
     <text-input v-bind:value.sync="myobject.field3"></text-input>
     <button v-on:click="myobject = {}">Parent Reset</button>
-    --------<br/>
+    <br/>--------<br/>
     <label>Child</label>
     <embedded-form v-bind:value.sync="myobject"></embedded-form>
   </section>
   <hr>
   <section>
-    Request loading<br/>
-    <button v-on:click="loadUsers()">Load users</button>
+    <h2>Web requests are easy.</h2><br/>
+    <button v-on:click="loadUsers()">Load users</button><br/>
     <ul>
       <li v-for="user in users" track-by="id">
         {{user.first_name}}
@@ -60,7 +66,7 @@
   </section>
   <hr>
   <section>
-    Template repeats with identity and just-in-time reducing<br/>
+    <h2>Repeating elements is easy. You can even manipulate collections at the time they are needed instead of creating a new property.</h2><br/>
     <ul>
       <li v-for="object in objects.slice(1,4)" track-by="id">
         {{object.label}} - {{object.value}}
@@ -69,30 +75,37 @@
   </section>
   <hr>
   <section>
-    Just-in-time formatting via filters<br/>
+    <h2>Output formatting can be done just-in-time via filters without having to store an extra field.</h2><br/>
     <div>original: {{title}}</div>
-    <div>with filter: {{title | despace}}</div>
+    <div>with filter (despace): {{title | despace}}</div>
   </section>
   <hr>
   <section>
-    Real-time style change<br/>
+    <h2>You can change styles based on boolean expressions.</h2><br/>
     <div v-bind:style="{color: color}">I am {{color}}</div>
     <button v-on:click="color = 'blue'">Blue</button>
     <button v-on:click="color = 'green'">Green</button>
   </section>
   <hr>
   <section>
-    Real-time class change<br/>
+    <h2>You can change classes based on boolean expressions.</h2><br/>
     <div v-bind:class="big ? 'big-class' : ''">I change size</div>
     <button v-on:click="big = !big">change size</button>
   </section>
   <hr>
   <section>
-    Transclusion test<br/>
+    <h2>You can perform element transclusion (portletting)</h2><br/><br/>
     <div>
       <transclusion>
         This should appear.
       </transclusion>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <h2>Components can be modals.</h2><br/><br/>
+    <div>
+      <button v-on:click="launchModal();">Launch</button>
     </div>
   </section>
   <hr>

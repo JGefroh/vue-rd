@@ -23,6 +23,22 @@
   </section>
   <hr>
   <section>
+    Data Lookup Function in a loop<br/>
+    <div v-for="(object, index) in objects">
+        {{ getNameForID(object) }}
+        {{object.myloop = 2}}
+    </div>
+  </section>
+  <hr>
+  <section>
+    Template Variable SEtting<br/>
+    <div v-for="(object, index) in objects">
+      <span v-bind:data-math="(object.myloop = index)"></span>
+      My template assigned var is: {{ object.myloop }}
+    </div>
+  </section>
+  <hr>
+  <section>
     Recursive component loading<br/>
     <div>
       <input v-model="level"></input>

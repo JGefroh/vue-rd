@@ -1,12 +1,16 @@
 <form>
-  {{value}}<br/>
-  <label>field1 (child)</label><br/>
+  Child sees:<br/>
+  {{value}}
+  <br/><br/>
+  <label>Field1 (child)</label><br/>
   <input v-model="value.field1"></input>
   <br/>
-  <label>field2 (child)</label><br/>
+  <label>Field2 (child)</label><br/>
   <input v-model="value.field2"></input>
   <br/>
-  <label>field3 (child)</label><br/>
-  <input v-model="value.field3"></input>
+  <label>Field3 (child)</label><br/>
+  <text-input v-bind:value.sync="value.field3"></text-input>
+  <br/>
+  <br/>
   <button v-on:click="childReset" type="button">Child Reset</button>
 </form>

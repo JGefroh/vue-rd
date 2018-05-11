@@ -80,7 +80,10 @@ module.exports = {
         parallel: true,
         sourceMap: !IS_PRODUCTION_BUILD, // set to true if you want JS source maps,
         compress: IS_PRODUCTION_BUILD,
-        mangle: IS_PRODUCTION_BUILD
+        mangle: IS_PRODUCTION_BUILD,
+        output: {
+          beautify: false
+        }
       })
     ]
 };

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import UsersService from 'modules/users/users-service';
+import ModalService from 'modules/base/services/modals/modals-service'
 
 Vue.component('examples-basic-page', {
   template: require('./examples-basic-page.html'),
@@ -27,7 +28,19 @@ Vue.component('examples-basic-page', {
   },
   methods: {
     onClick1(params) {
-      alert('clicked me -' + params);
+      alert('These params were passed from the child:' + params);
+    },
+    launchModal() {
+        ModalService.launch({
+            component: 'examples-basic-page'
+          },
+          (value) => {
+            console.info("Accepted");
+            this.modalValue = value;
+          },
+          (value) =>  {
+            console.info("Cancelled");
+          });
     },
     loadUsers() {
       UsersService.index().then((payload) => {

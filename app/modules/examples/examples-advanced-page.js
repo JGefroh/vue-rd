@@ -8,7 +8,16 @@ Vue.component('examples-advanced-page', {
       user: {},
       user2: {},
       user3: {},
-      level: 3
+      level: 3,
+      console: console,
+      objects: [
+        {id: 2}, {id: 3}, {id: 4}
+      ],
+      objectNamesByID: {
+        2: 'Joseph',
+        3: 'Josephine',
+        4: 'Joey'
+      }
     }
   },
   mounted() {
@@ -23,5 +32,8 @@ Vue.component('examples-advanced-page', {
     });
   },
   methods: {
+    getNameForID(element) {
+      return this.objectNamesByID[element.id];
+    }
   },
 });

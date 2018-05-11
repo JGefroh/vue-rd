@@ -10,7 +10,7 @@ Vue.component('examples-modal-page', {
   methods: {
     launchModal() {
       ModalService.launch({
-          component: 'examples-modal'
+          component: 'examples-basic-page'
         },
         (value) => {
           console.info("Accepted");
