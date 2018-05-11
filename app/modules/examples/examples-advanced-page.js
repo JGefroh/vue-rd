@@ -9,9 +9,13 @@ Vue.component('examples-advanced-page', {
     return {
       allowed: false,
       allowed2: false,
+      allowed3: false,
       user: {},
       user2: {},
       user3: {},
+      payload:{
+        name: ''
+      },
       level: 3,
       objects: [
         {id: 2}, {id: 3}, {id: 4}
@@ -37,6 +41,13 @@ Vue.component('examples-advanced-page', {
   methods: {
     getNameForID(element) {
       return this.objectNamesByID[element.id];
+    },
+    getUserNameAsync(id) {
+      UsersService.show(id).then((response) => {
+        this.payload.name = response.data.first_name;
+        // this.payload.last_name = response.data.last_name; //Vue won't know to trigger a change here.
+        Vue.set(this.payload, 'last_name', response.data.last_name);
+      });
     },
     print(message) {
       console.info(message);

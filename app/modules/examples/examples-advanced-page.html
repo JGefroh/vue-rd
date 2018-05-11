@@ -61,6 +61,16 @@
   </section>
   <hr>
   <section>
+    You can fetch data asynchronously triggered via template<br/>
+    <div v-if="allowed3">
+      {{ getUserNameAsync(2) }}
+      {{ payload.name }}
+      {{ payload.last_name}}
+    </div>
+    <button v-on:click="allowed3=true">Print via template</button>
+  </section>
+  <hr>
+  <section>
     You can load components recursively.<br/>
     <div>
       <input v-model="level"></input>
