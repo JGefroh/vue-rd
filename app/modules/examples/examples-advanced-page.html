@@ -2,36 +2,35 @@
   <h1>A collection of advanced examples.</h1>
   <hr>
   <section>
-    Data load on page load<br/>
+    You can run queries to fetch data load on page load.<br/>
     <div>
       {{user.first_name}} {{ user.last_name }}
     </div>
   </section>
   <hr>
   <section>
-    Data load on page load from query param<br/>
+    You can run queries to fetch data load on page load using query parameters from the URL.<br/>
     <div>
       {{user2.first_name}} {{ user2.last_name }}
     </div>
   </section>
   <hr>
   <section>
-    Data load on page load from path param<br/>
+    You can run queries to fetch data load on page load using path parameters from the URL.<br/>
     <div>
       {{user3.first_name}} {{ user3.last_name }}
     </div>
   </section>
   <hr>
   <section>
-    Data Lookup Function in a loop<br/>
+    You can run a lookup function to fetch just-in-time data.<br/>
     <div v-for="(object, index) in objects">
         {{ getNameForID(object) }}
-        {{object.myloop = 2}}
     </div>
   </section>
   <hr>
   <section>
-    Template Variable SEtting<br/>
+    You can run assignments in the template to store temporary variables.<br/>
     <div v-for="(object, index) in objects">
       <span v-bind:data-math="(object.myloop = index)"></span>
       My template assigned var is: {{ object.myloop }}
@@ -39,7 +38,30 @@
   </section>
   <hr>
   <section>
-    Recursive component loading<br/>
+    You can execute expressions via JS<br/>
+    <div v-if="allowed">
+      {{print('hi')}}
+    </div>
+    <button v-on:click="allowed=true">Print via template</button>
+  </section>
+  <hr>
+  <section>
+    Vue templates are strictly scoped, but you can access things on the Vue prototype.<br/>
+    ...
+    <div v-if="allowed2">
+      {{ console }}
+      This won't work because console doesn't exist in this scope.
+    </div>
+    <div v-if="allowed2">
+      But this will work because it was globally defined on the Vue prototype.
+      {{ my_global_console }}
+      {{ my_global_console.info("HI!!!!!") }}
+    </div>
+    <button v-on:click="allowed2=true">Call via template</button>
+  </section>
+  <hr>
+  <section>
+    You can load components recursively.<br/>
     <div>
       <input v-model="level"></input>
       <recursion v-bind:level="level" v-if="level > 0"></recursion>

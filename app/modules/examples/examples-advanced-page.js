@@ -1,15 +1,18 @@
 import Vue from 'vue';
 import UsersService from 'modules/users/users-service';
 
+Vue.prototype.my_global_console = console
+
 Vue.component('examples-advanced-page', {
   template: require('./examples-advanced-page.html'),
   data() {
     return {
+      allowed: false,
+      allowed2: false,
       user: {},
       user2: {},
       user3: {},
       level: 3,
-      console: console,
       objects: [
         {id: 2}, {id: 3}, {id: 4}
       ],
@@ -34,6 +37,9 @@ Vue.component('examples-advanced-page', {
   methods: {
     getNameForID(element) {
       return this.objectNamesByID[element.id];
+    },
+    print(message) {
+      console.info(message);
     }
   },
 });
