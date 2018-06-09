@@ -13,6 +13,9 @@
   <section>
     <collapsible-panel header="My Collapsible Panel" v-bind:isOpen.sync="isOpen">
       <h1>Hello, I am a potato.</h1>
+      <template slot="actions">
+        <button>Hello</button>
+      </template>
       <div>
         This panel is {{isOpen}}
       </div>

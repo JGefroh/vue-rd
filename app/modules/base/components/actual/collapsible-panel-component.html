@@ -1,9 +1,12 @@
-<div class="collapsible-panel-component">
+<section class="collapsible-panel-component">
   <div class="header"
        v-on:click="internalIsOpen = !internalIsOpen; $emit('update:isOpen', internalIsOpen)">
     {{header}}
     <span class="toggle-icon fa fa-fw"
           v-bind:class="{'fa-minus': !internalIsOpen, 'fa-square-o': internalIsOpen}"></span>
+    <div class="actions">
+      <slot name="actions"></slot>
+    </div>
   </div>
   <transition name="collapse">
     <div class="body"
@@ -11,4 +14,4 @@
       <slot></slot>
     </div>
   </transition>
-</div>
+</section>
