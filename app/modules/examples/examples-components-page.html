@@ -1,0 +1,12 @@
+<section class="examples-advanced-page">
+  <h1>A collection of components.</h1>
+  <hr>
+  <section>
+    <color-input label="Pick a color..."
+                 v-bind:colors="colors"
+                 v-bind:value.sync="selectedColor"></color-input>
+     <span v-if="selectedColor.value">
+       You selected: {{selectedColor.value}}, or {{selectedColor.label}}
+     </span>
+  </section>
+</section>

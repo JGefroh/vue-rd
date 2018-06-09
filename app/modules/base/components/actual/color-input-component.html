@@ -1,0 +1,11 @@
+<div class="color-input-component">
+  <label>{{label}}</label>
+  <div>
+    <span v-for="color in colors"
+          v-bind:class="{selected: value && value.value == color.value}"
+          v-bind:style="{backgroundColor: color.value}"
+          v-on:click="$emit('update:value', color)"
+          class="color">
+    </span>
+  </div>
+</div>
