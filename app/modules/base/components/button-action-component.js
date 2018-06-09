@@ -11,3 +11,4 @@ Vue.component('button-action', {
   },
   template: require('./button-action-component.html')
 })
+ 

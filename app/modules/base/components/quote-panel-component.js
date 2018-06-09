@@ -12,3 +12,4 @@ Vue.component('quote-panel', {
   },
   template: require('./quote-panel-component.html')
 })
+ 

@@ -11,10 +11,5 @@ Vue.component('color-input', {
       type: Array
     },
     label: String
-  },
-  data() {
-    return {};
-  },
-  methods: {
   }
-})
+});

@@ -6,7 +6,7 @@ Vue.component('examples-components-page', {
   template: require('./examples-components-page.html'),
   data() {
     return {
-      colors: [{value: '#FF0000', label: 'Red'}, {value: '#00FF00', label: 'Green'}, {value: '#0000FF', label: 'Blue'}, ],
+      colors: [{value: '#FF0000', label: 'Red'}, {value: '#00FF00', label: 'Green'}, {value: '#0000FF', label: 'Blue'}],
       selectedColor: {}
     }
   },

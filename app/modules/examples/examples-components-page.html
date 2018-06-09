@@ -4,7 +4,7 @@
   <section>
     <color-input label="Pick a color..."
                  v-bind:colors="colors"
-                 v-bind:value.sync="selectedColor"></color-input>
+                 v-bind:value.sync="selectedColor" />
      <span v-if="selectedColor.value">
        You selected: {{selectedColor.value}}, or {{selectedColor.label}}
      </span>
