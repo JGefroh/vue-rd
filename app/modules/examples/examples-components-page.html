@@ -9,4 +9,13 @@
        You selected: {{selectedColor.value}}, or {{selectedColor.label}}
      </span>
   </section>
+  <hr>
+  <section>
+    <collapsible-panel header="My Collapsible Panel" v-bind:isOpen.sync="isOpen">
+      <h1>Hello, I am a potato.</h1>
+      <div>
+        This panel is {{isOpen}}
+      </div>
+    </collapsible-panel>
+  </section>
 </section>

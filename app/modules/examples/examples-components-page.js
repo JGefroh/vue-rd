@@ -7,7 +7,8 @@ Vue.component('examples-components-page', {
   data() {
     return {
       colors: [{value: '#FF0000', label: 'Red'}, {value: '#00FF00', label: 'Green'}, {value: '#0000FF', label: 'Blue'}],
-      selectedColor: {}
+      selectedColor: {},
+      isOpen: false
     }
   },
   mounted() {

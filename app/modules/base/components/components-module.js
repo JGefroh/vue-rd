@@ -1,4 +1,5 @@
 require ('./actual/color-input-component.js');
+require ('./actual/collapsible-panel-component.js');
 require ('./address-input-component');
 require ('./amount-input-component');
 require ('./button-action-component');
